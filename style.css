@@ -9,6 +9,11 @@ body {
     padding: 15px;
 }
 
+.logo{
+  width: 150px;
+  height: 150px;
+}
+
 .nav-side-menu {
   overflow: auto;
   background-color: #2e353d;
