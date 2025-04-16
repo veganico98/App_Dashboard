@@ -27,8 +27,8 @@
 		        <div class="menu-list">
 		  
 		            <ul id="menu-content" class="menu-content collapse out">
-		                <li>
-		                  <a href="#"><i class="fa fa-tachometer-alt sidebar-icon"></i> Dashboard</a>
+		                <li id="btnDashboard">
+		                  <a href="#"><i  class="fa fa-tachometer-alt sidebar-icon"></i> Dashboard</a>
 		                </li>
 		                
 		                <li  data-toggle="collapse" data-target="#ajuda" class="collapsed">
@@ -44,17 +44,17 @@
 
 		<!-- paginas -->
 		<div class="main" id="pagina">
-		    
-		    <div class="container">
 
-		    	<div class="row">
-		    		<div class="col">
+			<div id="telaDashboard" class="container ">
+
+				<div class="row">
+					<div class="col">
 						
 						<form>
 							<div class="form-group row">
 								<label class="col-sm-9 col-form-label">Competência:</label>
 								<div class="col-sm-3">
-									<select class="form-control-plaintext">
+									<select class="form-control-plaintext" id="competencia">
 										<option value="">-- Selecione </option>
 										<option value="2018-08">Agosto / 2018</option>
 										<option value="2018-09">Setembro / 2018</option>
@@ -63,51 +63,51 @@
 								</div>
 							</div>
 						</form>
-
+			
 						<hr />
-
-		    		</div>
-		    	</div>
-		    	
-		    	<div class="row mb-3">
-		    		<div class="col-md-4">
-		    			<div class="card">
+			
+					</div>
+				</div>
+				
+				<div class="row mb-3">
+					<div class="col-md-4">
+						<div class="card">
 							<div class="card-header">
 								Número de vendas
 							</div>
 							<div class="card-body">
+								 <h5 class="card-title" id="numeroVendas">?</h5>
+							</div>
+						</div>
+					</div>
+			
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								Total de vendas
+							</div>
+							<div class="card-body" id="totalVendas">
 								 <h5 class="card-title">?</h5>
 							</div>
 						</div>
 					</div>
-
-					<div class="col-md-4">
-		    			<div class="card">
-							<div class="card-header">
-								Total de vendas
-							</div>
-							<div class="card-body">
-								 <h5 class="card-title">?</h5>
-							</div>
-						</div>
-		    		</div>
-
+			
 				</div>
-
+			
 				<div class="row mb-3">
 					<div class="col-md-4">
-		    			<div class="card">
+						<div class="card">
 							<div class="card-header">
 								Clientes ativos
 							</div>
 							<div class="card-body">
-								 <h5 class="card-title">?</h5>
+								 <h5 id="clientesAtivos"class="card-title">?</h5>
 							</div>
 						</div>
 					</div>
-
+			
 					<div class="col-md-4">
-		    			<div class="card">
+						<div class="card">
 							<div class="card-header">
 								Clientes inativos
 							</div>
@@ -115,12 +115,12 @@
 								 <h5 class="card-title">?</h5>
 							</div>
 						</div>
-		    		</div>
-		    	</div>
-
-		    	<div class="row mb-3">
+					</div>
+				</div>
+			
+				<div class="row mb-3">
 					<div class="col-md-4">
-		    			<div class="card">
+						<div class="card">
 							<div class="card-header">
 								Total de reclamações
 							</div>
@@ -131,7 +131,7 @@
 					</div>
 					
 					<div class="col-md-4">
-		    			<div class="card">
+						<div class="card">
 							<div class="card-header">
 								Total de elogios
 							</div>
@@ -139,10 +139,10 @@
 								 <h5 class="card-title">?</h5>
 							</div>
 						</div>
-		    		</div>
-
-		    		<div class="col-md-4">
-		    			<div class="card">
+					</div>
+			
+					<div class="col-md-4">
+						<div class="card">
 							<div class="card-header">
 								Total de sugestões
 							</div>
@@ -150,12 +150,12 @@
 								 <h5 class="card-title">?</h5>
 							</div>
 						</div>
-		    		</div>
-		    	</div>
-
-		    	<div class="row mb-3">
+					</div>
+				</div>
+			
+				<div class="row mb-3">
 					<div class="col-md-4">
-		    			<div class="card">
+						<div class="card">
 							<div class="card-header">
 								Total de despesas
 							</div>
@@ -164,8 +164,8 @@
 							</div>
 						</div>
 					</div>
-		    	</div>
-		    </div>
+				</div>
+			</div>
 
 		</div>
 
