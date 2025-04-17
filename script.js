@@ -1,28 +1,28 @@
 $(document).ready(() => {
 
-    // $.ajax({
-    //     type: 'GET',
-    //     url: 'app.php',
-    //     data: { dadosFixos: true },
-    //     dataType: 'json',
-    //     success: dados => { 
-    //          $('#clientesAtivos').html(dados.clientesAtivos)
-    //     },
-    //     error: erro => { console.log(erro) }
-    // })
-	
+    let dashboardOriginal = $('#pagina').html();
+
     $('#btnDashboard').on('click', () => {
-        $('#telaDashboard').show();
+        console.log("clicado")
+        $('#telaDashboard').removeClass('d-none').show()
     })
     
-    
+    $.ajax({
+        type: 'GET',
+        url: 'app.php',
+        data: { dadosFixos: true },
+        dataType: 'json',
+        success: dados => { 
+            $('#clientesAtivos').html(dados.clientesAtivos)
+            $('#clientesInativos').html(dados.clientesInativos)
+            $('#reclamacoes').html(dados.reclamacoes)
+            $('#elogios').html(dados.elogios)
+            $('#sugestoes').html(dados.sugestoes)
+        },
+        error: erro => { console.log(erro) }
+    })
+	
     $('#documentacao').on('click', () => {
-        // $('#pagina').load('documentacao.html')
-        
-        // $.get('documentacao.html', data => {
-        //     $('#pagina').html(data)
-        // })
-
         $.post('documentacao.html', data => {
             $('#pagina').html(data)
         })
@@ -38,7 +38,6 @@ $(document).ready(() => {
     $('#competencia').on('change', (e) => {
 
         let competencia = $(e.target).val()
-        // console.log(competencia)
         
         $.ajax({
             type: 'GET',
@@ -46,14 +45,13 @@ $(document).ready(() => {
             data: `competencia=${competencia}`,
             dataType: 'json',
             success: dados => {
-                $('#numeroVendas').html(dados.numeroVendas)
-                $('#totalVendas').html(dados.total_vendas)
-                $('#clientesAtivos').html(dados. clientesAtivos)
+                console.log(dados);
+                $('#numeroVendas').html(dados.dashboard.numeroVendas)
+                $('#totalVendas').html(dados.dashboard.total_vendas)
+                $('#despesas').html(dados.dashboard.despesas)
                 },
             error: erro => {console.log(erro)}
         })
-
-        //método, url, dados, sucesso/ erro
     })
 })
 
