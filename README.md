@@ -6,4 +6,3 @@
 </div>
 
 <img src="images/DashBoard - index.png">
-
